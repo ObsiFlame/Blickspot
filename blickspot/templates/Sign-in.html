@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blickspot</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/loader.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'assets/Blickspot-Logo.svg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/Sign-in.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/bootstrap-elevated.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/main-home.css')}}">
+    <link rel="stylesheet" href="/static/Styles/Fonts.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+      <div class="spinner-grow text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+      <div class="container">
+        <a class="nav-brand" href="{{url_for('home')}}"><img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="150" height="40"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main-collapse">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('cyber_attack')}}">Cyber Attacks</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('report')}}">Reports</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">Trending</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">About</a></li>
+          </ul>
+          <ul class="navbar-nav align-items-lg-center d-lg-flex ml-lg-auto">
+            <li class="nav-item d-lg-block"><a class="nav-link btn Youtuber-btn text-white px-5" href="{{url_for('login')}}">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar-end -->
+      <div id="particles-js" class="border-bottom"></div>
+
+      <header class="text-center mt-5">
+      <h2 class="display-4 head-login">Login</h2>
+      </header>
+      <div class="container text-center mt-4">
+      {% with messages = get_flashed_messages()%}
+      {% if messages %}
+        {%for msg in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{msg}}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+      {% endif %}
+      {% endwith %}
+      </div>
+      <div class="container container-form">
+          <form action="/Login" method="post" class="mb-3">
+            <div class="form-group">
+                <label for="InputEmail2">Email Address</label>
+                <input type="email" class="form-control" id="InputEmail" name="InputEmail2" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else</small>
+              </div>
+              <div class="form-group">
+                <label for="InputPassword2">Password</label>
+                <input type="password" class="form-control" id="InputPassword2" placeholder="Password" name="InputPassword2" required>
+                <small id="passwordHelp" class="form-text text-muted">Your password is our concern</small>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label pb-2" for="exampleCheck1">Remember me</label>
+              </div>
+              <button type="submit" class="btn Youtuber-btn py-1">Login</button>
+          </form>
+          <small class="my-5">Don't have an account ? <a class="text-primary" href="{{url_for('signup')}}">Create Account</a></small>
+          
+      </div>
+      <!-- Features -->
+      <div class="cloud-back top-wave bottom-wave">
+        <div class="container">
+          <section class="row mb-3 text-center des-banner">
+            <div class="col-md-4 p-3">
+              <h2 class="head-cl">Statistics</h2>
+              <p class="text-center"> Let's know what's happing around the digital world. We bring you the Statistics from the best platforms so that you get concerned about your digital Life</p>
+            </div>
+            <div class="col-md-4 p-3">
+              <h2 class="head-cl">Cyber Healing</h2>
+              <p class="text-center">Nation with care from Us, Learn more how the situations get away from the worst-nights & we as a Cybersecurity Community will let you know what security measures you should take</p>
+            </div>
+            <div class="col-md-4 p-3">
+              <h2 class="head-cl">Social Palace</h2>
+              <p class="text-center">Social media platforms getting more important as the world develops faster, Our platform will let you know the best Infosec Persons to look for</p>
+            </div>
+          </section>
+          <!-- <section class="row mb-3"></section> -->
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <section class="footer clearfix">
+        <div class="container-fluid p-5">
+          <div class="row">
+            <div class="col-md-4 text-center"><span><a href="" class="contact-us">blickspot@gmail.com</a></span></div>
+            <div class="col-md-4 text-center"><span class="Designer">Designed by <i class="fas fa-meteor" style="color: #ad2351;"></i> Seacom Skills University</span>
+              <small class="community-name text-center">BLICKSPOT</small>
+            </div>
+            <div class="col-md-4 text-center social-footer-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-discord"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+</body>
+<script src="/static/scripts/loader.js"></script>
+<script src="{{url_for('static',filename = 'assets-main/particles.js')}}"></script>
+<script src="{{url_for('static', filename = 'assets-main/app.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

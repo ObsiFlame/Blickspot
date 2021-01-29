@@ -1,0 +1,17 @@
+.article-head{
+    font-size: 1.3em;
+}
+th{
+    font-family: 'Google-Product-Sans-Black';
+    letter-spacing: 1px;
+    font-size: 1em;
+}
+td{
+    font-family: 'Google-Product-Sans-Regular';
+}
+.table-container{
+    height: 40vh;
+}
+.fa{
+    color: #0a0a0a !important;
+}

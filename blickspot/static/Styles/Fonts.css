@@ -1,0 +1,36 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@font-face{
+    font-family: 'HelveticaBlack';
+    src: url(/static/Fonts/Helvetica95Black.ttf);
+}
+@font-face{
+    font-family: 'AcuminPro';
+    src: url(/static/Fonts/Acumin-BdPro.otf);
+}
+@font-face{
+    font-family: 'Gravity-Regular';
+    src: url(/static/Fonts/Gravity-Regular.otf);
+}
+@font-face{
+    font-family: 'SFUI-regular';
+    src: url(/static/Fonts/SFUIText-Regular.ttf);
+}
+@font-face{
+    font-family: 'SFUI-semibold';
+    src: url(/static/Fonts/SFUIText-Semibold.ttf);
+}
+
+@font-face{
+    font-family: 'Google-Product-Sans-Regular';
+    src: url(/static/Fonts/Google-Product-Sans/ProductSans-Regular.ttf);
+}
+@font-face{
+    font-family: 'Google-Product-Sans-Black';
+    src: url(/static/Fonts/Google-Product-Sans/ProductSans-Black.ttf);
+}
+@font-face{
+    font-family: 'Google-Product-Sans-Light';
+    src: url(/static/Fonts/Google-Product-Sans/ProductSans-Light.ttf);
+}

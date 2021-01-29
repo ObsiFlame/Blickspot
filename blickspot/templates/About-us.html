@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blickspot-About</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/loader.css')}}">
+
+<link rel="stylesheet" href="/static/Styles/Fonts.css">
+<link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/main-home.css')}}">
+<link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/About.css')}}">
+<link rel="shortcut icon" href="{{url_for('static', filename = 'assets/Blickspot-Logo.svg')}}" type="image/x-icon">
+<link rel="stylesheet" href="{{url_for('static', filename = 'Styles/bootstrap-elevated.css')}}">
+<body>
+    <!-- Loader -->
+  <div class="loader">
+    <div class="spinner-grow text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+      <div class="container">
+        <a class="nav-brand" href="{{url_for('home')}}"><img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="150" height="40"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main-collapse">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('cyber_attack')}}">Cyber Attacks</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('report')}}">Reports</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">Trending</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">About</a></li>
+
+          </ul>
+          <ul class="navbar-nav align-items-lg-center d-lg-flex ml-lg-auto">
+            <li class="nav-item d-lg-block"><a class="nav-link btn Youtuber-btn text-white px-5" href="{{url_for('login')}}">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <!-- Navbar End -->
+    <main class="main">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-5 text-center border-bottom">
+      <div class="col-md-7 p-lg-5 mx-auto my-5">
+        <h2 class="display-2 my-3 heading-main">About Us</h2>
+        <p class="lead font-weight-normal">Professional or Beginner get Cybersecurity resources for everyone</p>
+        <a href="mailto:blickspot@gmail.com" class="btn Youtuber-btn">Connect</a>
+      </div>
+    </div>
+
+    <!-- Cards-Container -->
+    <div class="container">
+        <h5 class="display-3 heading text-center mb-5">Services we Provide</h5>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="/static/assets/Card-thumbs/new-data-services-UO-QYR28hS0-unsplash.jpg" alt="Secure Manual testing" height="225" width="100%" class="bd-placeholder card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Manual Penetration Testing</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Card-2 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="/static/assets/Card-thumbs/science-in-hd-3kgzvab8SMg-unsplash.jpg" alt="NPT" height="225" width="100%" class="bd-placeholder card-img-top">
+                <div class="card-body">
+                <h5 class="card-title">Network Penetration Testing</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card-3 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="/static/assets/Card-thumbs/computer-desk-electronics-indoors-374074.jpg" alt="WAPT" height="225" width="100%" class="bd-placeholder card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Web Application Penetration Testing</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="container podcast m-b m-t bg-light py-2">
+      <h1 class="display-4 heading w-100 mx-auto text-center">Hack skills</h1>
+      <div class="row mx-auto">
+        <div class="col">
+          <p class="lead para">We will help you understand every aspect of Cybersecurity, how to use different tools and techniques to find vulnerability of a system
+            Handeling situations, our paltform will sure as much resources as it can to make you feel comfortable with the real life scenarios. As user's are always 
+            concerned about latest news our platform provides the trending hacks happenend recently and where to look for them. Checkout our Trendings, get more imformed 
+            with the current happenings 
+          </p>
+          <!-- <small><i class="fas fa-podcast px-2"></i> Cybersecurity 2020</small> -->
+        </div>
+        <div class="col">
+          <p class="lead para"> Podcast that manage to make the users more confident towards their digital life. Latest vulnerbilities found that are very much applicable.
+            How to Keep clean machines: having the latest security software, web browser, and operating system are the best defenses against viruses, malware, and other online threats. Set antivirus software to run a scan after each update. Install 
+            other key software updates as soon as they are available
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <h5 class="display-4 heading m-b text-center">Dominant features of Blickspot</h5>
+    
+    <div class="container blickspot-feature mt-5 m-auto">
+      <ul class="nav nav-pills nav-fill blick-work-process text-center clearfix">
+        <li class="nav-item">
+          <a class="nav-link active clearfix m-auto" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" >
+            <img src="/static/assets/icons-SVG/icons8-tumblr.svg" alt="Social" class="icon pull-left">
+            <div class="text text-left">Social Hub <br> Our Cyber House</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+            <img src="/static/assets/icons-SVG/icons8-fsociety-mask.svg" alt="Search" class="icon pull-left">
+            <div class="text text-left">Hack with Us <br> Be the Soldier</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+            <img src="/static/assets/icons-SVG/icons8-brave.svg" alt="Friends" class="icon pull-left">
+            <div class="text text-left">Lost in the Alley <br> Make Friends with Us </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pill-coffee-tab" data-toggle="pill" href="#pill-coffee" role="tab" aria-controls="pill-coffee" aria-selected="false">
+            <img src="/static/assets/icons-SVG/icons8-starbucks.svg" alt="Starbucks" class="icon pull-left">
+            <div class="text text-left">Buy us a Coffee, <br> Time together moment</div>
+          </a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="blick-description">
+            <p class="para mobile-display">
+              <span>
+                "Social Hub <br> on Cyber House"
+              </span>
+            </p>
+            <div class="table blick-description-table">
+              <div class="table-cell width40 vertical-top p-r-25 position-relative text-left">
+                <div class="blick-sub-heading">
+                We're on tumblr, A community which is their for every Beginner or Professional who wants to develop their skills.
+                </div>
+                <div class="bottom width100">
+                  <div class="table">
+                    <p class="para text-left help-text table-cell width80 vertical-center">
+                      Step Up even further by moving close to us with the follow of tumblr.
+                    </p>
+                    <div class="icon table-cell width15 vertical-center text-right">
+                      <img src="/static/assets/icons-SVG/icons8-hand-right-48.png" alt="See to your right" class="size30 hexa">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-cell width60 vertical-center text-right">
+                <img src="/static/assets/panel-images/Tumblr-Blickspot.png" alt="Tumblr-Blickspot" class="help-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="blick-description">
+            <p class="para mobile-display">
+              <span>
+                "Hack with <br> with us Know more"
+              </span>
+            </p>
+            <div class="table blick-description-table">
+              <div class="table-cell width40 vertical-top p-r-25 position-relative text-left">
+                <div class="blick-sub-heading">
+                Yes we are here to help you for being good in infosec, Let's hack together & share more resources
+                </div>
+                <div class="bottom width100">
+                  <div class="table">
+                    <p class="para text-left help-text table-cell width80 vertical-center">
+                      Today you work hard and sharp you stand tomorrow with the pride
+                    </p>
+                    <div class="icon table-cell width15 vertical-center text-right">
+                      <img src="/static/assets/icons-SVG/icons8-thor.svg" alt="Hack Solider" class="size30 hexa">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-cell width60 vertical-center text-right">
+                <img src="/static/assets/panel-images/Blickspot-2020Book_Guide.png" alt="Tumblr-Blickspot" class="help-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="blick-description">
+            <p class="para mobile-display">
+              <span>
+                "Lets's be Friends <br> Help each others"
+              </span>
+            </p>
+            <div class="table blick-description-table">
+              <div class="table-cell width40 vertical-top p-r-25 position-relative text-left">
+                <div class="blick-sub-heading">
+                Nothing is better than helping & standing together, Being for each other will end up with a 
+                good story in the end
+                </div>
+                <div class="bottom width100">
+                  <div class="table">
+                    <p class="para text-left help-text table-cell width80 vertical-center">
+                      Don't panic you can find us just do some little OSINT & you will get something special.
+                    </p>
+                    <div class="icon table-cell width15 vertical-center text-right">
+                      <img src="/static/assets/icons-SVG/icons8-binoculars.svg" alt="OSINT Binoculars" class="size30 hexa">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-cell width60 vertical-center text-right">
+                <img src="/static/assets/panel-images/Blickspot-Team-Artboard.png" alt="Tumblr-Blickspot" class="help-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pill-coffee" role="tabpanel" aria-labelledby="pills-coffee-tab">
+          <div class="blick-description">
+            <p class="para mobile-display">
+              <span>
+                "Buy <br> us a Coffee"
+              </span>
+            </p>
+            <div class="table blick-description-table">
+              <div class="table-cell width40 vertical-top p-r-25 position-relative text-left">
+                <div class="blick-sub-heading">
+                Support us as a community, we will try to dive more than ever. All the resources, all for you.
+                Your contribution will help us progress better.
+                </div>
+                <div class="bottom width100">
+                  <div class="table">
+                    <p class="para text-left help-text table-cell width80 vertical-center">
+                      Remember that the happiest people are not those getting more, but those giving more.
+                    </p>
+                    <div class="icon table-cell width15 vertical-center text-right">
+                      <img src="/static/assets/icons-SVG/icons8-cup-48.png" alt="Coffee" class="size30 hexa">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-cell width60 vertical-center text-right">
+                <img src="/static/assets/panel-images/buy-Us-Coffee-xhdauidsas7293.png" alt="Tumblr-Blickspot" class="help-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </main>
+  <div class="text-center about-last-blickspot position-relative">
+    <div class="container col-md-7 p-lg-5 mx-auto my-5">
+      <h1 class="heading-main text-center py-2 pt-4 mt-4 position-relative"> So, What do you think of joining us</h1>
+      <p class="para py-2">Let's make the Cyber world much better, by being together</p>
+      <a href="#" class="btn Youtuber-btn px-5 py-2">Get Started</a>
+    </div>
+  </div>
+    <!-- Footer -->
+    <section class="footer container-fluid">
+      <div class="p-4 mt-1">
+        <div class="row">
+          <div class="col-md-4 text-center"><span><a href="" class="contact-us">blickspot@gmail.com</a></span></div>
+          <div class="col-md-4 text-center"><span class="Designer">Designed by <i class="fas fa-meteor" style="color: #ad2351;"></i> Seacom Skills University</span>
+            <small class="community-name text-center">Blickspot Infosec Community</small>
+          </div>
+          <div class="col-md-4 text-center social-footer-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+</body>
+<!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
+<script src="/static/scripts/loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="/static/scripts/tooltip-enable.js"></script>
+
+</html>

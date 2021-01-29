@@ -1,0 +1,56 @@
+body{
+    font-family: 'Google-Product-Sans-Regular';
+    color: #383838;
+    background-color: #fafbfd;
+}
+a{
+    text-decoration: none !important;
+    color: #383838;
+}
+.pull-left{
+    float: left;
+}
+.text{
+    display: block !important;
+    font-size: 0.81em;
+    /* font-weight: 400; */
+    color: #515050;
+    font-weight: 600;
+}
+.nav-link.active{
+    color: #000 !important;
+    background-color: #fff !important;
+    border-bottom: 4px solid #FF0000 !important;
+    border-radius: 0px !important;
+}
+.nav-link.active{
+    opacity: 1;
+    /* -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    filter: grayscale(0); */
+}
+.icon{
+    width: 40px;
+    margin-right: 10px;
+}
+.card-title{
+    font-size: 1.2em;
+}
+.fa-podcast{
+    color: red; 
+}
+.blickspot-feature{
+    /* background-color: #f7f7f7; */
+}
+.about-last-blickspot{
+    height: 400px;
+    background-color: #f7f7f7;
+    position: relative;
+}

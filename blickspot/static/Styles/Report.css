@@ -1,0 +1,34 @@
+html,body{
+    background-color: #ffff;
+    color: #262526 !important;
+    font-family: 'Google-Product-Sans-Regular';
+}
+.head-report{
+    font-weight: 900;
+    font-family: 'Google-Product-Sans-Black';
+    text-transform: capitalize;
+
+}
+/* #chartdiv{
+    
+} */
+.percentage{
+    font-size: 6rem;
+    font-weight: bolder;
+}
+.base-main{
+    height: 80vh;
+}
+.head-report-2{
+    font-weight: 900;
+}
+.T-content{
+    margin-top: 10rem !important;
+}
+.lead-1{
+    color: #6c757d !important;
+    font-size: 0.9em;
+}
+.fab, .fa , .far, .fas{
+    /* color:#ffff !important; */
+}

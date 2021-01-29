@@ -1,0 +1,101 @@
+body{
+    /* background-color: #1f2c3b; */
+    color: #e0e0e0;
+    font-family: 'SFUI-regular';
+}
+a{
+    text-decoration: none !important;
+}
+#particles-js{
+    height: 40vh;
+    background-color:#fff;
+    position: relative;
+}
+
+.container-form{
+    height: 20vh;
+    margin-top: 2%;
+    font-family: 'Google-Product-Sans-Black';
+    max-width: 700px;
+    margin-bottom: 15%;
+    /* background-image:  linear-gradient(to top, #fff 0, #000 100%); */
+}
+.form-control{
+    border-radius: 0;
+}
+.cloud-back{
+    position: relative;
+    background-image: url(/static/assets/svg-frames/stardots_gray.svg),linear-gradient(to top, #324665 0, #192d4a 100%);
+    color: #fff;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+.top-wave::before{
+    content: '';
+    background-image: url(/static/assets/svg-frames/top-wave-2.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 101%;
+    height: 140px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.bottom-wave::after{
+    content: '';
+    background-image: url(/static/assets/svg-frames/bottom-wave-2.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    
+}
+.head-login{
+    font-family: 'American-captain';
+    font-family: 'Google-Product-Sans-Black';
+    color: #0a0a0a;
+    position: relative;
+    font-size: 4vw;
+    letter-spacing: 2px;
+}
+.des-banner > p{
+    font-size: smaller;
+}
+.head-cl{
+    font-family: 'Google-Product-Sans-Black';
+    text-transform: capitalize;
+    text-shadow: 1px 1px 4px #000;
+    letter-spacing: 2px;
+}
+.btn{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.fab{
+    color: #0a0a0a !important;
+}
+
+@media (max-width:500px){
+    .container-form{
+        margin-bottom: 60%;
+    }
+    .cloud-back{
+        margin-top: 10rem;
+    }
+    .head-login{
+        font-size: 4em;
+    }
+    .top-wave::before{
+        visibility: visible;
+        width: 100vw;
+    }
+    .top-wave::after{
+        visibility: visible;
+        width: 100vw;
+    }
+}

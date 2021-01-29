@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blickspot Cyber Hub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/main-home.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/Cyber.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'assets/Blickspot-Logo.svg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/bootstrap-elevated.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/loader.css')}}">
+    <link rel="stylesheet" href="/static/Styles/Fonts.css">
+</head>
+<body>
+   <!-- Loader -->
+   <div class="loader">
+    <div class="spinner-grow text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container">
+      <a class="nav-brand" href="{{url_for('home')}}"><img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="150" height="40"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-main-collapse">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('cyber_attack')}}">Cyber Attacks</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('report')}}">Reports</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">Trending</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">About</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-lg-center d-lg-flex ml-lg-auto">
+          <li class="nav-item d-lg-block"><a class="nav-link btn Youtuber-btn text-white px-5" href="{{url_for('login')}}">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3 mb-2 heading-main">Cyber attacks ever happened </h1>
+            <p class="lead">Security is a major thing that you should care about now a days Cybercriminals and hackers are always thinking of clever, new ways to exploit your devices— and you have to be perpetually vigilant. </p>
+            <p class="mt-3">
+                <a class="btn btn-warning" href="#">Learn More</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <article class="card w-100 text-white bg-dark mx-auto my-5 lead p-3">
+            <div class="card-body">
+                <h5 class="card-title article-head">Kevin Metnik</h5>
+                <p class="card-text">Kevin David Mitnick is an American computer security consultant, author, and convicted hacker, best known for his high-profile 1995 arrest and five years in prison for various computer and communications-related crimes.</p>
+                <p class="card-text"><small class="text-muted">Posted on {{currentDate}}</small></p>
+            </div>
+        </article>
+        <article class="card w-100 text-dark bg-light mx-auto my-5 lead p-3">
+            <div class="card-body">
+                <h5 class="card-title article-head">George Hotz</h5>
+                <p class="card-text">George Francis Hotz, alias geohot, is an American hacker and creative consumer known for unlocking the iPhone, allowing
+                    the phone to be used with other wireless carriers, contrary to AT&T's and Apple's intentions. 
+                    He developed the limera1n exploit for iOS.</p>
+                    <p class="card-text"><small class="text-muted">Posted on {{currentDate}}</small></p>
+            </div>
+        </article>
+        <h1 class="display-4 text-center my-5 heading-main">Hacks that changed the world</h1>
+        <div class="container table-container">
+          <table class="table table-bordered table-dark text-center">
+            <thead>
+                <tr>
+                <th scope="col">Year of Hack</th>
+                <th scope="col">The Hack</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for case in data%}
+                <tr>
+                    <td>{{ case }}</td>
+                    <td>{{data[case]}}</td>
+                </tr>
+                
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+      </div>
+            
+    <!-- FOOTER START -->
+    <section class="footer clearfix">
+      <div class="container-fluid p-5">
+        <div class="row">
+          <div class="col-md-4 text-center"><span><a href="" class="contact-us">blickspot@gmail.com</a></span></div>
+          <div class="col-md-4 text-center"><span class="Designer">Designed by <i class="fas fa-meteor" style="color: #ad2351;"></i> Seacom Skills University</span>
+            <small class="community-name text-center">BLICKSPOT</small>
+          </div>
+          <div class="col-md-4 text-center social-footer-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+</body>
+<script src="/static/scripts/loader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

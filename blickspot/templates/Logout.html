@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blickspot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/Styles/Logout.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/loader.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/main-home.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'assets/Blickspot-Logo.svg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/bootstrap-elevated.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/Styles/Fonts.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="spinner-grow text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container">
+      <a class="nav-brand" href="{{url_for('home')}}"><img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="150" height="40"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-main-collapse">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('cyber_attack')}}">Cyber Attacks</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('report')}}">Reports</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">About</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">Trending</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-lg-center d-lg-flex ml-lg-auto">
+          <li class="nav-item d-lg-block"><a class="nav-link btn Youtuber-btn text-white px-5" href="{{url_for('login')}}">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+      <!-- NAVBAR END -->
+      <main class="logout-container">
+        <div class="container text-center my-5 logout-message">
+          {% with messages = get_flashed_messages()%}
+            {% if messages %}
+              {%for msg in messages %}
+                <h1 class="font-weight-bold display-2 heading-main"> {{ msg }} </h1>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+        </div>
+         <!-- Footer -->
+          
+      </main>
+      <section class="footer clearfix">
+        <div class="container-fluid p-5">
+          <div class="row">
+            <div class="col-md-4 text-center"><span><a href="" class="contact-us">blickspot@gmail.com</a></span></div>
+            <div class="col-md-4 text-center"><span class="Designer">Designed by <i class="fas fa-meteor" style="color: #ad2351;"></i> Seacom Skills University</span>
+              <small class="community-name text-center">BLICKSPOT</small>
+            </div>
+            <div class="col-md-4 text-center social-footer-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-discord"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+</body>
+<script src="/static/scripts/loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/loader.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'assets/Blickspot-Logo.svg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/Sign-in.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/bootstrap-elevated.css')}}">
+    <link rel="stylesheet" href="/static/Styles/user-profile.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/main-home.css')}}">
+    <link rel="stylesheet" href="/static/Styles/Fonts.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="spinner-grow text-danger" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+       <!-- Navbar -->
+       <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="container">
+          <a class="nav-brand" href="{{url_for('home')}}"><img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="150" height="40"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-main-collapse">
+            <ul class="navbar-nav ml-lg-auto">
+              <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('cyber_attack')}}">Cyber Attacks</a></li>
+              <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('report')}}">Reports</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">Trending</a></li>
+              <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">About</a></li>
+            </ul>
+            <ul class="navbar-nav align-items-lg-center d-lg-flex ml-lg-auto">
+              <div class="dropdown">
+                <button class="btn Youtuber-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{g.ProfileUsername}}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item nav-link" href="{{url_for('logout')}}">Logout</a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <main class="main">
+      <!-- <div class="container text-center mt-5">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{g.ProfileUsername}}</strong> Welcome to your Dashboard
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div> -->
+      <!-- Profile -->
+      <div class="container profile-container rounded p-5 my-5">
+        <div class="row mx-auto">
+          <div class="media">
+            <img src="/static/assets/avatars/large_511.png" class="mr-3 profile-pic rounded-circle" alt="User Profile Picture">
+            <div class="media-body">
+              <h5 class="mt-0 heading username">{{g.ProfileUsername}}</h5>
+              <h6 class="text-muted">{{g.ProfileEmail}}</h6>
+              <div class="row user-statistics">
+                <div class="col">
+                  <h5>1,270</h5>
+                  <small class="text-muted">followers</small>
+                </div>
+                <div class="col">
+                  <h5>380</h5>
+                  <small class="text-muted">following</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Malware Attacks chart -->
+      <div class="container m-b Statistics-container  rounded p-5">
+        <h2 class="display-4 heading-main mb-0 statistics-heading">Statistics</h2>
+        <small class="mt-1 text-left text-muted">Cyber threats analysis 2020 with respect to no. of attacks</small>
+        <div class="row mt-5 ">
+          <div class="col-4 justify-content-center align-self-center">
+            <div class="heading attack-stat">
+              <h6>Total Attacks</h6>
+              <h4>120,000</h4>
+            </div>
+            <div class="heading attack-stat">
+              <h6>Users Affected</h6>
+              <h4>20,000</h4>
+            </div>
+          </div>
+          <div class="col-8">
+            <canvas id="myChart" class=" mb-5 chart-statistics position-relative" width="800" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container resources-container">
+        <h2 class="display-4 heading-main">Resources</h2>
+        <h3 class="heading">Vulnerabilities of 2020</h3>
+        <div class="row">
+          
+        </div>
+        <div class="row my-5 position-relative">
+          <div class="card-deck col">
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Injection</h5>
+                <p class="card-text">Injection flaws, such as SQL, NoSQL, OS, and LDAP injection, occur when untrusted data is sent to an interpreter as part of a command or query.
+                   The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Broken Authentication</h5>
+                <p class="card-text"> Application functions related to authentication and session management are often implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens, or to exploit other 
+                  implementation flaws to assume other users’ identities temporarily or permanently.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Sensitive Data Exposure</h5>
+                <p class="card-text">Many web applications and APIs do not properly protect sensitive data, such as financial, healthcare, and PII. Attackers may steal or modify 
+                  such weakly protected data to conduct credit card fraud, identity theft, or other crimes.  </p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- Row 2  for security vulnerabilities-->
+        <div class="row my-5 position-relative">
+          <div class="card-deck col">
+
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">XML External Entities(XXE)</h5>
+                <p class="card-text">Many older or poorly configured XML processors evaluate external entity references within XML documents. External entities can be used to
+                   disclose internal files using the file URI handler, internal file shares, internal port scanning, remote code execution, and denial of service attacks.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Broken Access Control</h5>
+                <p class="card-text">Restrictions on what authenticated users are allowed to do are often not properly enforced. Attackers can exploit these flaws to access unauthorized functionality and/or data, such as access other users’ accounts, 
+                  view sensitive files, modify other users’ data, change access rights, etc.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Security Misconfiguration</h5>
+                <p class="card-text">Security misconfiguration is the most commonly seen issue. This is commonly a result of insecure default configurations, incomplete or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information. Not only must all operating systems, frameworks, libraries, and applications 
+                  be securely configured.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="row position-relative">
+          <div class="card-deck col">
+
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Cross-site Scripting XSS</h5>
+                <p class="card-text">XSS flaws occur whenever an application includes untrusted data in a new web page without proper validation or escaping, 
+                  or updates an existing web page with user-supplied data using a browser API that can create HTML or JavaScript.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Insecure Deserialization</h5>
+                <p class="card-text">Insecure deserialization often leads to remote code execution. Even if deserialization flaws do not result in remote code execution, they can be used to perform attacks,
+                   including replay attacks, injection attacks, and privilege escalation attacks.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Using Components with Known Vulnerabilities</h5>
+                <p class="card-text">Components, such as libraries, frameworks, and other software modules, run with the same privileges as the application. If a vulnerable 
+                  component is exploited, such an attack can facilitate serious data loss or server takeover.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Last Row -->
+        <div class="row my-5">
+          <div class="col-md-12">
+            <div class="card position-relative">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <h5 class="card-title">Insufficient Logging & Monitoring</h5>
+                <p class="card-text">Insufficient logging and monitoring, coupled with missing or ineffective integration with incident response, 
+                  allows attackers to further attack systems, maintain persistence, pivot to more systems, and tamper, extract, or destroy data. Most breach studies show time to detect a breach is over 200 days, typically detected by external parties rather than internal processes or monitoring.</p>
+                <p class="card-text"><small class="text-muted">OWASP</small></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Streamers which are -->
+      <div class="container streamer-list">
+        <h2 class="display-4 heading-main mt-2">Infosec Streamer's</h2>
+        <div class="row text-dark my-4">
+          <div class="col-md-4">
+            <div class="card text-white mb-4 streamer-card">
+              <img src="/static/assets/Streamers/Nahamsec_87672192_2553333118238038_7153509703507446954_n.jpg" class="card-img streamer" alt="...">
+              <div class="card-img-overlay d-flex flex-wrap align-content-end">
+                <h5 class="card-title heading text-white">Nahamsec</h5>
+                <p class="card-text para text-white">This guy does a good recon videos and bug bounties topics. Definitely recommended his channel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-white streamer-card">
+              <img src="/static/assets/Streamers/Stok_Fedrick_83478507_197044631513763_7614497106403733906_n.jpg" class="card-img streamer" alt="...">
+              <div class="card-img-overlay d-flex flex-wrap align-content-end">
+                <h5 class="card-title heading text-white">Stok Fedrik</h5>
+                <p class="card-text para text-white">This guy does a good recon videos and bug bounties topics. Definitely recommended his channel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-white streamer-card">
+              <img src="/static/assets/Streamers/d0nut_79534205_1036910319994472_7454186060183122515_n.jpg " class="card-img streamer" alt="...">
+              <div class="card-img-overlay d-flex flex-wrap align-content-end">
+                <h5 class="card-title heading text-white">d0nut</h5>
+                <p class="card-text para text-white">This guy does a good recon videos and bug bounties topics. Definitely recommended his channel.</p>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-white streamer-card">
+              <img src="/static/assets/Streamers/joe_Helle_32183721SAJdhdgsuwmx.jpg" class="card-img streamer" alt="...">
+              <div class="card-img-overlay d-flex flex-wrap align-content-end">
+                <h5 class="card-title heading text-white">themayor11</h5>
+                <p class="card-text para text-white">This guy does a good recon videos and bug bounties topics. Definitely recommended his channel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-white streamer-card">
+              <img src="/static/assets/Streamers/JhaddixD1awLPNVsAAfa08.jpg" class="card-img streamer" alt="...">
+              <div class="card-img-overlay d-flex flex-wrap align-content-end">
+                <h5 class="card-title heading text-white">Jhaddix</h5>
+                <p class="card-text para text-white">This guy does a good recon videos and bug bounties topics. Definitely recommended his channel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-white streamer-card">
+              <img src="/static/assets/Streamers/Cyber-Mentor_40224360_542696446176055_1993022896972912051_jpg.jpg" class="card-img streamer" alt="...">
+              <div class="card-img-overlay d-flex flex-wrap align-content-end">
+                <h5 class="card-title heading text-white">Cybermentor</h5>
+                <p class="card-text para text-white">This guy does a good recon videos and bug bounties topics. Definitely recommended his channel.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="container hacking-tools">
+        <h2 class=" display-4 heading-main">Hacking Tools</h2>
+        <div class="row mt-5">
+          <table class="table text-center table-bordered">
+            <thead>
+              <tr>
+                <th scope="col" class="w-25">Name </th>
+                <th scope="col" class="w-100">Description</th>
+                <th scope="col" class="w-100">Available link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AMASS</td>
+                <td>Amass Project performs network mapping of attack surfaces and external asset discovery using open source information gathering and active reconnaissance techniques</td>
+                <td>https://github.com/OWASP/Amass</td>
+              </tr>
+              <tr>
+                <td>Gobuster</td>
+                <td>Gobuster is a tool used to brute-force URI's, DNS, Virtual Host names on target web servers</td>
+                <td>https://github.com/OJ/gobuster</td>
+              </tr>
+              <tr>
+                <td>Burp-suite</td>
+                <td>It is a set of tools used for penetration testing of web applications</td>
+                <td>https://portswigger.net/burp</td>
+              </tr>
+              <tr>
+                <td>SearchSpolit</td>
+                <td>It's an whole of exploit datatbase, An awesome tool which helps you search for exploits, shellcodes</td>
+                <td>https://github.com/offensive-security/exploitdb</td>
+              </tr>
+              <tr>
+                <td>SQLMAP</td>
+                <td>sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.</td>
+                <td>https://github.com/sqlmapproject/sqlmap</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+    
+
+    <!-- FOOTER -->
+    <section class="footer clearfix">
+      <div class="container-fluid p-5">
+        <div class="row">
+          <div class="col-md-4 text-center"><span><a href="" class="contact-us">blickspot@gmail.com</a></span></div>
+          <div class="col-md-4 text-center"><span class="Designer">Designed by <i class="fas fa-meteor" style="color: #ad2351;"></i> Seacom Skills University</span>
+            <small class="community-name text-center">BLICKSPOT</small>
+          </div>
+          <div class="col-md-4 text-center social-footer-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+<script src="/static/scripts/loader.js"></script>
+<script src="/static/scripts/chart.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

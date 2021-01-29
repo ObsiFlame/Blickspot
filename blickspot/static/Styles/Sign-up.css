@@ -1,0 +1,111 @@
+body{
+    background-color: #fff;
+    color: #1a1a1a;
+    font-family: 'SFUI-regular';
+}
+#particles-js{
+    height: 50vh;
+    background-image:url(/static/assets/svg-frames/stardots_gray.svg),linear-gradient(to bottom, #324665 0, #192d4a 100%); ;
+    background-repeat: repeat;
+    background-size:contain;
+    position: relative;
+}
+
+.container-form{
+    height: 20vh;
+    margin-top: 2%;
+    font-family: 'Google-Product-Sans-Black';
+    max-width: 700px;
+    margin-bottom: 20%;
+}
+label{
+    color: #1a1a1a;
+}
+.cloud-back{
+    position: relative;
+    background-image: url(/static/assets/svg-frames/stardots_gray.svg),linear-gradient(to top, #324665 0, #192d4a 100%);
+    color: #fff;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+.top-wave::before{
+    content: '';
+    background-image: url(/static/assets/svg-frames/top-wave-2.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 101%;
+    height: 140px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.bottom-wave::after{
+    content: '';
+    background-image: url(/static/assets/svg-frames/bottom-wave-2.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    
+}
+.head-login{
+    font-family: 'Google-Product-Sans-Black';
+    font-size: 4vw;
+    letter-spacing: 2px;
+    color: #1a1a1a;
+    position: relative;
+}
+.title{
+    font-family: 'Google-Product-Sans-Black';
+    background: -webkit-linear-gradient(right,#3903fc,#e721eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.20em;
+    letter-spacing: 1.2px;
+}
+.head-cl{
+    /* font-family: 'American-captain'; */
+    font-family: 'Google-Product-Sans-Black';
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px #000;
+}
+.btn{
+    /* font-family: "SFUI-regular"; */
+    font-family: 'Google-Product-Sans-Regular';
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    margin-top: 10px;
+}
+.footer-main{
+    color: #1a1a1a;
+}
+.fab{
+    color: #1a1a1a !important;
+}
+
+@media (max-width:500px){
+    .container-form{
+        margin-bottom: 100%;
+    }
+    .cloud-back{
+        margin-top: 10rem;
+    }
+    .title{
+        font-size: 0.8em;
+    }
+    .head-login{
+        font-size: 3em;
+    }
+    .top-wave::before{
+        visibility: visible;
+        width: 100vw;
+    }
+    .top-wave::after{
+        visibility: visible;
+        width: 100vw;
+    }
+}

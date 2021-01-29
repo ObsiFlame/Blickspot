@@ -1,0 +1,11 @@
+.logout-container{
+
+    /* margin-top:50% !important; */
+    /* bottom: 50% !important; */
+    height: 100vh;
+
+}
+.logout-message{
+    margin-top: 20% !important;
+    margin-bottom: 50% !important;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blickspot</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.3/glider.min.js"></script>
+
+<link rel="stylesheet" href="/static/Styles/Fonts.css">
+<link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/main-home.css')}}">
+<link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/loader.css')}}">
+<link rel="shortcut icon" href="{{url_for('static', filename = 'assets/Blickspot-Logo.svg')}}" type="image/x-icon">
+<link rel="stylesheet" href="{{url_for('static', filename = 'Styles/bootstrap-elevated.css')}}">
+
+<body>
+  <!-- Loader -->
+  <!-- <div class="loader">
+    <div class="spinner-grow text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div> -->
+  <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="container">
+          <a class="nav-brand" href="{{url_for('home')}}"><img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="150" height="40"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-main-collapse">
+            <ul class="navbar-nav ml-lg-auto">
+              <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('cyber_attack')}}">Cyber Attacks</a></li>
+              <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('report')}}">Reports</a></li>
+              <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">Trending</a></li>
+              <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">About</a></li>
+            </ul>
+            <ul class="navbar-nav align-items-lg-center d-lg-flex ml-lg-auto">
+              <li class="nav-item d-lg-block"><a class="nav-link btn Youtuber-btn text-white px-5" href="{{url_for('login')}}">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    <!-- main starts -->
+      <main class="main">
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-5 text-center">
+          <div class="col-md-7 p-lg-5 mx-auto my-5">
+            <h2 class="display-4 my-3 heading-main">Confused about your digital world ?</h2>
+            <p class="lead font-weight-normal">Professional or Beginner get Cybersecurity resources for everyone</p>
+            <a href="#" class="btn Youtuber-btn">GET STARTED</a>
+          </div>
+        </div>
+
+      <div class="jumbotron bg-light mb-5 scroll-gal animate__animated animate__fadeIn animate__delay-1s"> 
+        <!-- <h1 class="text-center display-5">Life is all That Matters</h1> -->
+        <div class="row">
+          <div class="col-md-1"><img src="/static/assets/GIFs/Happy-girl.webp" alt="Happy Women" class=" img-fluid rounded" data-action="zoom"></div>
+          <div class="col-md-1"><video preload="auto" src="/static/assets/GIFs/rainbow-hands-Id 3710529-1.m4v"  autoplay muted loop class="img-fluid rounded" data-action="zoom"></video></div>
+          <div class="col-sm-1"> <img src="/static/assets/GIFs/photo-of-people-doing-handshakes-3183172.jpg" class="img-fluid rounded" alt="People Office"></div>
+          <div class="col-md-2"><img src="/static/assets/GIFs/Person-HeadphoneTY_MBn8-unsplash.jpg" class="img-fluid rounded" alt="Person-with Headphone"></div>
+          <div class="col-md-1"><video src="/static/assets/GIFs/PMoments-You Want-99-1.m4v" autoplay muted loop class="img-fluid rounded" data-action="zoom"></video></div>
+          <div class="col-md-1"><img src="/static/assets/GIFs/GeoPlacestern-iUBgeNeyVy8-unsplash.jpg" class="img-fluid rounded" alt="Geoplace"></div>
+          <div class="col-md-1"><video src="/static/assets/GIFs/Coffee-Laptop-4hgadasv.m4v" autoplay muted loop class="img-fluid rounded"></video></div>
+          <div class="col-md-1"><img src="/static/assets/GIFs/appleWatchFebfCyMk68A-unsplash.jpg" alt="Digital-Personal-Data" class="img-fluid rounded"></div>
+          <div class="col-md-1"><video src="/static/assets/GIFs/Mountain-momentId 4047756-1.m4v" autoplay muted loop class="img-fluid rounded"></video></div>
+          <div class="col-md-1"><img src="/static/assets/GIFs/Credit-paying.jpg" alt="Digital-Personal-Data" class="img-fluid rounded"></div>
+          <div class="col-md-1"><img src="/static/assets/GIFs/user-getting-freelynaibaho-OH2SslaiaIQ-unsplash.jpg" alt="User moving Freely" class="img-fluid rounded"></div>
+        </div>
+      </div>
+
+      <div class="container-lg text-left">
+        <h1 class="display-5 heading text-center m-b">We care about our user's</h1>
+        <div class="row mt-5 ">
+          <div class="col-md-5 mx-auto">
+            <h3 class="text-left cell-heading">The Voice of Community</h3>
+            <p class="para pt-2">Our mission is to bring in as much possible resources through collaboration with infosec peoples leveraging their skills and social intelligence. Creators make authentic and engaging branded content and post it to their organic audience.
+              Grasp the power of advertisements that are personal and respectful of context</p> 
+          </div>
+          <div class="col-md-5 mx-auto">
+            <h3 class="text-left cell-heading">Technology and Data</h3>
+            <p class="para pt-2">technology makes it easier to discover the right content creators, getting their attention, monitoring activity and measure the ROI.
+              We use historical insights which are far beyond from the 'followers count' and include influencer’s posting habits, engagements quality, collaboration examples etc</p>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-5 mx-auto">
+            <h3 class="text-left cell-heading">Have a look what other's say</h3>
+            <p class="para pt-2">We carefully select and vet every single content creators based on the quality, impact of the content, engagements and suitability to work with brands. 
+              As much as we love technology we also believe that creativity is a wild mind and disciplined eye so we also help with the overall strategy of the campaign</p>
+          </div>
+          <div class="col-md-5 mx-auto">
+            <h3 class="text-left cell-heading">A Great Place Cyber Security</h3>
+            <p class="para pt-2">As world grows faster, users get engaged with them. We bring you a Cybersecurity platform where you will get to know every single security measure that is important to 
+              you as a user. In this platform you will get to know everything that's important for you as your digital world matter's
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-5 m-t">
+        <div class="row w-100">
+          <div class="col mx-auto">
+            <h4 class="heading text-left ml-5 Youtuber-Ad p-4"><i class="fab fa-youtube"></i> Youtuber's who have awesome's content for Cybersecurity </h4>
+          </div>
+          <div class="col-sm-2 mx-auto">
+            <h4 class="float-right p-4"><a href="{{url_for('login')}}" class="btn Youtuber-btn">GET LIST</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Palate -->
+      <div class="container mt-5 animate__animated animate__fadeIn animate__delay-1s">
+        <div class="row-1">
+          <div class="col-md-12">
+            <div class="image-container align-items-center">
+              <div class="image-container-1"><img src="/static/assets/GIFs/Container-images/alexander-w-BgBrjcWfAAQ-unsplash.jpg" class="img-fluid"></div>
+              <div class="image-container-2"><img src="/static/assets/GIFs/Container-images/mEZ3PoFGs_k-unsplash.jpg" class="img-fluid"></div>
+              <div class="image-container-3"><img src="/static/assets/GIFs/Container-images/rayul-_M6gy9oHgII-unsplash.jpg" class="img-fluid"></div>
+              <div class="image-container-4"><img src="/static/assets/GIFs/Container-images/sai-de-silva-httxBNGKapo-unsplash.jpg" class="img-fluid"></div>
+              <div class="image-container-5"><img src="/static/assets/GIFs/Container-images/steve-halama-T9A31lqrXnU.jpg" class="img-fluid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Container starts --> 
+      <section class="container px-4 text-center">
+
+           <div class="row feature-card-1 mb-5 bg-white jumbotron mt-5 p-4">
+               <div class="col px-3 mx-5">
+                   <h2 class="heading mb-4">Our Motivation</h2>
+                   <p class="lead text-center">Cyber attacks are in a larger scale it's increasing faster Blickspot wants people to be aware of this attacks and how should they take precaution,
+                     we express the way of prevention. Blickspot will provide you a reference of cyber attacks how much they impact on the world.
+                    Strategic and carefully governed approach to ensure that data remains secure.
+                    It’s kind of like a martial art and we wanted to be able to defend ourselves like a street fighter.
+                    </p>
+               </div>
+           </div>
+           
+           <div class="row feature-card-2 mb-5 bg-white jumbotron mt-5 p-4 mb-5">
+              <div class="col px-3 mx-3">
+                  <h2 class="heading mb-4">How Blickspot work</h2>
+                  <p class="lead text-center">People always wants the best of all our platform is the very exact place for that, Data is important to us and so we are here to take users 
+                    look at the major cyber attacks all around the world. Connectivity is the major thing we want to aware the neccesity of cyber attacks, individuals and enterprises to protect against unauthorized access to data centers and other computerized systems
+                    We provide counter measures & on cyber attacks, and how to be more secure with your personals. Blickspot enables you to easily adopt new capabilities to match your organizational readiness
+                  </p>
+              </div>
+           </div>
+           <!-- <hr class="feature-divider mt-5"> -->
+      </section>
+
+      <!-- Carousel -->
+      <div class=" my-5 container img-fluid p-2 rounded">
+        <h2 class="display-4 heading text-center my-5">Hackers & Security Researchers</h2>
+        <div id="carouselExampleCaptions" class="carousel slide my-5" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item p-2 active">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="heading">Edward Snowden</h5>
+                <p>An American whistleblower who copied and leaked highly classified information from the 
+                  National Security Agency in 2013 when he was a Central Intelligence Agency employee and subcontractor</p>
+              </div>
+            </div>
+            <div class="carousel-item p-2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="heading">Rachel Tobac </h5>
+                <p>CEO of SocialProofSecurity, she is known for her social engineering skills</p>
+              </div>
+            </div>
+            <div class="carousel-item p-2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="heading">Marcus Hutchins</h5>
+                <p>Also known online as MalwareTech, is a British computer security researcher known for temporarily stopping the WannaCry ransomware attack</p>
+              </div>
+            </div>
+          </div>
+          <!-- <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a> -->
+        </div>
+      </div>
+      
+
+
+      <div class="jumbotron social-banner text-center">
+        <img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="160" height="50" class="pb-2 mb-3">
+        <h2 class="text-center heading">We are on social media, Follow us on</h2>
+        <div class="container text-center">
+         <div class="row text-center justify-content-center my-1 px-5">
+            <div class="col-md-8 text-center">
+           <p class="text-center mx-5">Blickspot is the platform to work with internet's best influential content creators of all size who love photography, travel, fashion, food, comedy, music, filmmaking, technology etc</p>
+             <img src="/static/assets/Social Icons/instagram-new.png" class="social-icons img-fluid" alt="Instagram">
+             <img src="/static/assets/Social Icons/facebook-new.png" class="social-icons img-fluid pl-4" alt="Facebook">
+           </div>
+            <!-- <div class="col-sm-2 text-left"><div> -->
+          </div>
+         </div> 
+      </div>
+      <!-- Footer -->
+      <section class="footer clearfix">
+        <div class="container-fluid p-5">
+          <div class="row">
+            <div class="col-md-4 text-center"><span><a href="" class="contact-us">blickspot@gmail.com</a></span></div>
+            <div class="col-md-4 text-center"><span class="Designer">Designed by <i class="fas fa-meteor" style="color: #ad2351;"></i> Seacom Skills University</span>
+              <small class="community-name text-center">BLICKSPOT</small>
+            </div>
+            <div class="col-md-4 text-center social-footer-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-discord"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      </main>
+      <!-- main ends -->
+      
+
+
+</body>
+<script src="/static/scripts/slider.js"></script>
+</script>
+<script src="/static/scripts/loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,451 @@
+html,body{
+    font-family: 'SFUI-regular';
+    color: #0a0a0a;
+}
+a{
+    text-decoration: none !important;
+}
+.mobile-logo,
+.mobile-btn,
+.mobile-display {
+  display: none;
+}
+.margin-bottom-50{
+    margin-bottom: 5em !important;
+}
+.table {
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.table .table-cell{
+    display: table-cell;
+}
+.vertical-top {
+    vertical-align: top;
+}
+.vertical-center {
+    vertical-align: middle;
+}
+.hexa {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+.help-image {
+    max-width: 100%;
+}
+.blick-work-process {
+    display: block;
+    list-style: none;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+.p-r-25 {
+    padding-right: 25px;
+}
+.width15{
+    width: 15%;
+}
+.width33{
+    width: 33.33%;
+}
+.width40 {
+    width: 40% !important;
+}
+.width60{
+    width: 60%;
+}
+.width80{
+    width: 80%;
+}
+.width100{
+    width: 100%;
+}
+.pull-left{
+    float: left;
+}
+.blick-description {
+    min-height: 495px;
+}
+.blick-description-table {
+    display: block;
+    height: 330px;
+}
+.blick-description .bottom {
+    position: absolute;
+    top: 250px;
+    padding-right: 25px;
+}
+
+.blick-sub-heading{
+    font-size: 1em; 
+    margin: 20px auto 55px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.blick-description .blick-description-table .blick-sub-heading{
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+.blick-description .blick-description-table .blick-sub-heading{
+    margin-top: 0px;
+    color: rgb(68, 68, 68);
+    font-size: 1.49231em;
+    line-height: 34px;
+    font-weight: 500;
+    font-family: 'Google-Product-Sans-Regular';
+
+}
+.size30 {
+    height: 30px;
+    width: 30px;
+}
+.size70{
+    height: 70px;
+    width: 70px;
+}
+.text-dark{
+    color: #444444 !important;
+
+}
+.nav-item{
+    font-family:'Google-Product-Sans-Regular'; 
+    font-weight: 600;
+}
+.main-nav a{
+    font-size: 1rem;
+    text-decoration: none;
+}
+.main{
+    min-height: 100%;
+    position: static;
+    margin-bottom: -50px;
+}
+.m-b{
+    margin-bottom: 3.2em !important;
+}
+.m-t{
+    margin-top: 10em !important;
+}
+.cell-heading{
+    color: #444444;
+  font-size: 1.46153846em;
+  font-family: 'Google-Product-Sans-Regular';
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  position: relative;
+}
+.para{
+    font-size: 1.08em;
+    color: rgb(81, 80, 80);
+    font-family: 'Google-Product-Sans-Light';
+    line-height: 22px;
+    word-spacing: 1.5px;
+}
+.jumbotron{
+    background-color: #fff !important;
+    /* background: linear-gradient(to top,#fff,#ff2975) !important; */
+}
+.feature-card-1{ 
+    /* background:linear-gradient(#fff,#ff2975, #fff); */
+    background-color: #f5f5f5 !important;
+}
+.feature-card-2{
+    /* background: linear-gradient(to top,#fff, #f222ff, #fff); */
+    background-color: #f5f5f5 !important;
+} 
+.feature-divider{
+    margin: 5rem;
+    background-color: #ddd;
+}
+
+.login-con{
+    display: inline-flex;
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.login-btn{
+    color: #fff !important;
+}
+.heading{
+    color: #444444;
+    font-family: 'Google-Product-Sans-Regular';
+    font-size: 2.02em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+.heading-main{
+    color: #444444;
+    text-transform: capitalize;
+    font-family: "Google-Product-Sans-Regular";
+    /* font-size: 2em; */
+    font-weight: 600;
+    /* margin-top: 5em !important; */
+
+}
+.lead{
+    color: #0a0a0a;
+    font-size: 1.1rem;
+    /* font-family: 'Google-Product-Sans-Regular'; */
+    font-family: 'Google-Product-Sans-Light';
+    line-height: 1.5em;
+
+}
+.Youtuber-Ad{
+    border-left: 4px solid #FF0000;
+    font-size: 1.3em;
+}
+.Youtuber-btn{
+    background-color: #FF0000;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+    background:linear-gradient(90deg, #de0000 20%, #b80b17 100%, #e33969 50%) !important;
+}
+.Youtuber-btn:hover{
+    background:linear-gradient(90deg, #e33969 0%, #eb34d2 100%) !important;
+    font-weight: 700;
+    color: #fff !important;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+/* .threat-types{
+    margin-top: 5% !important;
+    margin-bottom: 10% !important;
+    font-size: 1.2rem;
+} */
+.att-head{
+    font-size: 1em;
+    color: #444444;
+    font-family: 'Google-product-Sans-Black';
+}
+.image-container{
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    margin-top: 60px; 
+    position: relative;
+}
+.image-container-4{
+    width: 30%;
+    right: 30px;
+    top: -10px;
+    z-index: 2;
+    position: relative;
+}
+.image-container-1{
+    width: 30%;
+    top: -10px;
+    right: -100px;
+    position: relative;
+    z-index: 1; 
+}
+.image-container-2{
+    width: 30%;
+    right: -30px;
+    top: -10px;
+    z-index: 2;
+    position: relative;
+}
+.image-container-3{
+    width: 40%;
+    z-index: 3;
+    position: relative;
+}
+.image-container-5{
+    width: 30%;
+    top: -20px;
+    left: -100px;
+    position: relative;
+    z-index: 1; 
+}
+.social-banner{
+    min-height: 10vh;
+    background-color: #f5f5f5 !important;
+    font-family: 'Google-Product-Sans-Light';
+    margin-bottom: 0 !important;
+    position: relative;
+}
+.social-icons{
+    height: 30px;
+}
+.fab{
+    font-size: 14px;
+}
+.fa-youtube{
+    color: #FF0000;
+    font-size: 1em;
+}
+.carousel{
+    background-color: #f5f5f5 !important;
+    color: #fff !important;
+}
+.carousel-item h5{
+    color: #fff !important;
+}
+.carousel,
+.carousel-item,
+.carousel-item.active {
+  height: 60vh;
+}
+.carousel-inner {
+  height: 100%;
+}
+.carousel-item:nth-child(1){
+    background-image: url("/static/assets/slider-palate/-Edward-Snowdengettyimages-1052155412_copy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.carousel-item:nth-child(2){
+    background-image: url("/static/assets/slider-palate/rachel-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.carousel-item:nth-child(3){
+    background-image: url("/static/assets/slider-palate/RROSALES_WIRED_MARCUS_HUTCHINS_0288-Web-Size.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.footer{
+    font-size: 1.107em;
+}
+.footer span{
+    font-size: 0.9em;
+}
+.footer .contact-us{
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    float: left;
+    color: #999999 !important;
+
+}
+.footer .Designer{
+    font-size: 0.8em;
+    font-family: 'Poppins', sans-serif;
+    color: #999999 !important;
+}
+.footer .community-name{
+    font-size: 11px;
+    display: block;
+    margin-top: 2px;
+    color: #999999 !important;
+
+}
+.footer .social-footer-icons{
+    color: #725a5a !important;
+    /* float: right !important; */
+}
+.footer .social-footer-icons a{
+    margin: 0 10px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    float: right;
+    margin-left: 10px;
+    color: #333333;
+    opacity: .5;
+    position: relative;
+}
+.social-footer-icons .fab{
+    font-size: 1.2em;
+    color: #333333 !important;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #A3A5A9;
+}
+
+@media screen and (max-width:900px){
+    .scroll-gal{
+        display: none;
+    }
+    .carousel-item{
+        background-image: linear-gradient(45deg, #f222ff,#ff2975);
+        border: none;
+    }
+    .heading-main{
+        font-size: 6vw;
+    }
+    .captions{
+        margin-bottom: 10vh;
+        font-size: 2rem;
+        top: 35%;
+        bottom: 60%;
+    }
+    /* .footer{
+        height: 20vh;
+        padding: 2em !important;
+
+    } */
+}
+
+@media only screen and (max-width: 719px){
+
+.nav-item{
+    margin-left:0px !important;
+    margin-right:0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.feature-card-1, .feature-card-2 p{
+    font-size: 1em !important;
+}
+.footer {
+    padding: 30px 50px;
+}
+.footer .contact-us{
+    /* font-family: 'Pacifico', cursive; */
+    font-weight: 500;
+    float: none !important;
+}
+.footer .Designer{
+    position: relative;
+    margin-top: 15px !important;
+}
+.footer .social-footer-icons{
+    float: none;
+    position: relative;
+    margin-top: 15px;
+}
+/* .footer .social-footer-icons a {
+    margin: 0 10px;
+    font-size: 0.9em !important;
+    color: #515050 !important;
+    opacity: .5;
+    position: relative;
+} */
+.footer .social-footer-icons a{
+    margin: 0 15px;
+    margin-top: 0px;
+    float: none;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    color: #333333;
+    opacity: .5;
+    position: relative;
+}
+}

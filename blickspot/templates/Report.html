@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+</head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/static/Styles/Fonts.css">
+<link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/main-home.css')}}">
+<link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/loader.css')}}">
+<link rel="shortcut icon" href="{{url_for('static', filename = 'assets/Blickspot-Logo.svg')}}" type="image/x-icon">
+<link rel="stylesheet" href="{{url_for('static', filename = 'Styles/bootstrap-elevated.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename = 'Styles/Report.css')}}">
+<!-- amchart -->
+
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<!-- <script src="https://www.amcharts.com/lib/4/charts.js"></script> -->
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+
+<body>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="spinner-grow text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container">
+      <a class="nav-brand" href="{{url_for('home')}}"><img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="150" height="40"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-main-collapse">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('cyber_attack')}}">Cyber Attacks</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('report')}}">Reports</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">About</a></li>
+          <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">Trending</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-lg-center d-lg-flex ml-lg-auto">
+          <li class="nav-item d-lg-block"><a class="nav-link btn Youtuber-btn text-white px-5" href="{{url_for('login')}}">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <div class="container mt-5">
+        <h1 class="display-3 text-center head-report">Data breach 2020 Map</h1>
+        <small class="text-center blockquote-footer">Impact within the world by this current day</small>
+        <div id="chartdiv" class="align-center" style="width:100%; height: 800px;"></div>
+
+<script>
+// Create chart instance
+var map = am4core.create("chartdiv", am4maps.MapChart);
+// Set map definition
+map.geodata = am4geodata_worldLow;
+
+// Set Projection
+map.projection = new am4maps.projections.Miller();
+// Create map Polygon series 
+
+var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
+
+// Make map load polygon (like country names) data from GeoJSON
+polygonSeries.useGeodata = true;
+
+polygonSeries.data = [{
+  "id":"IN",
+  "name":"India",
+  "value":30,
+  "attacks":"60% DoS"
+}]
+
+
+// Configure series
+var polygonTemplate = polygonSeries.mapPolygons.template;
+polygonTemplate.tooltipText = "{name}:{value}\n {attacks}";
+polygonTemplate.fill = am4core.color("#e342f5");
+
+// Create hover state and set alternative fill color
+var hs = polygonTemplate.states.create("hover");
+hs.properties.fill = am4core.color("#d91872");
+
+// Zoom Controk
+map.seriesContainer.draggable = false;
+map.seriesContainer.resizeable = false;
+map.maxZoomLevel = 1;
+
+// Remove Antarctica
+polygonSeries.exclude = ["AQ"];
+
+</script>
+</div>
+<div class="container mt-5 mb-5 base-main">
+    <div class="row my-5 pb-2 text-center">
+        <div class="col-md-4 d-flex-block">
+            <h3>
+                <span class="percentage" data-target="70">0</span>%
+            </h3>
+            <span><i class="fas fa-user-astronaut pr-2"></i> Breaches caused by outsider</span>
+        </div>
+        <div class="col-md-4 d-flex flex-column bd-highlight mb-3">
+            <h3>
+                <span class="percentage" data-target="43">0</span>%
+            </h3>
+            <span><i class="far fa-credit-card pr-2"></i> Breaches were financially motivated</span>
+        </div>
+        <div class="col-md-4 d-flex-block">
+            <h3>
+                <span class="percentage" data-target="63">0</span>%
+            </h3>
+            <span><i class="fas fa-globe-africa pr-2"></i> Attacks were phishing scams</span>
+        </div>
+    </div>
+    <!-- Cyber Updates -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-dark bg-white mb-3 shadow-sm rounded">
+          <img src="/static/assets/breachescom/Spotify.png" class="card-img-top" height="180" width="100%" alt="Spotify Data Breach">
+          <div class="card-body">
+            <h5 class="card-title">Spotify Data Breach 2020</h5>
+            <p class="card-text">Spotify released a notice of Data Breach. November 12th spotify discovered a vulnerability that exposed
+              Information related to the registration informations of spotify accounts
+            </p>
+            <a href="https://assets.documentcloud.org/documents/20422370/spotify-breach-notice-letter-californiadocx.pdf" class="btn btn-outline-success" target="blank">Spotify Notice</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card text-dark bg-white mb-3 shadow-sm rounded">
+          <img src="/static/assets/breachescom/fireeye.png" class="card-img-top" height="180" width="100%" alt="Fireeye hack 2020">
+          <div class="card-body">
+            <h5 class="card-title">Fireeye Breach 2020</h5>
+            <p class="card-text">They say that its kind of a sophisticated attack which was different than the usuals, it's also considered as a state-sponsored attack
+              Well they were compromised and attackers stole their " RED TEAM " tools
+            </p>
+            <a href="https://www.fireeye.com/blog/products-and-services/2020/12/fireeye-shares-details-of-recent-cyber-attack-actions-to-protect-community.html" class="btn btn-outline-danger" target="blank">Fireeye blog</a>
+          </div>
+        </div>  
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-dark bg-white mb-3 shadow-sm rounded">
+          <img src="/static/assets/breachescom/twitter.png" class="card-img-top bd-placeholder" height="180" width="100%" alt="Twitter breach 2020">
+          <div class="card-body">
+            <h5 class="card-title">Twitter Breach 2020</h5>
+            <p class="card-text">The security incident was happened through spear phishing attack. Well the attack lead to credential theft of 
+              twitter employees. With this knowledge they gained access to the twitter internal system.
+            </p>
+            <a href="https://blog.twitter.com/en_us/topics/company/2020/an-update-on-our-security-incident.html" class="btn btn-outline-primary" target="blank"> Twitter blog</a>
+          </div>
+        </div>  
+      </div>
+   
+    </div>
+    
+</div>
+
+ <!-- Footer -->
+ <section class="footer">
+  <hr>
+  <div class="container-fluid p-5">
+    <div class="row">
+      <div class="col-md-4 text-center"><span><a href="" class="contact-us">blickspot@gmail.com</a></span></div>
+      <div class="col-md-4 text-center"><span class="Designer">Designed by <i class="fas fa-meteor" style="color: #ad2351;"></i> Seacom Skills University</span>
+        <small class="community-name text-center">BLICKSPOT</small>
+      </div>
+      <div class="col-md-4 text-center social-footer-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+
+<script src="/static/scripts/loader.js"></script>
+<script src="/static/scripts/counter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

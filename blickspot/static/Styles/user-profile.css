@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.main{
+    height: 100%;
+    font-family: 'Google-Product-Sans-Regular';
+}
+.profile-container{
+    background-color: #fff3e3;
+}
+.profile-pic{
+    width: 120px;
+}
+.username{
+    font-size: 2em !important;
+    margin-bottom: 10px !important;
+}
+.user-statistics{
+    font-family: 'Google-Product-Sans-Regular';
+    font-weight: 600 !important;
+}
+.user-statistics h5{
+    font-weight: 600 !important;
+    font-size: 1.3em;
+    margin-bottom: 2px;
+}
+.user-statistics small{
+    font-size: 1.02em;
+}
+.chart-statistics{
+    /* height: 500px !important; */
+    /* font-family: 'Google-Product-Sans-Regular' !important; */
+    /* font-weight: 600 !important; */
+}
+.Statistics-container .statistics-heading{
+    letter-spacing: 1px;
+
+}
+.attack-stat h6{
+    font-size: 0.6em !important; 
+    font-weight: 500;
+}
+.attack-stat h4{
+    font-size: 1.2em;
+}
+.resources-container{
+    height: 1700px;
+    position: relative;
+}
+.streamer-list{
+    height: 1200px;
+    color: #fff;
+}
+.streamer{
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+.card-img{
+-webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+.card:hover .card-img{
+    /* opacity: 0.5; */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.card:hover .card-img-overlay{
+    color: #000 !important;
+    background: linear-gradient(to bottom, #736 20%, #000 100%) !important;
+    opacity: 0.75;
+}
+.streamer-card:hover .card-img-overlay h5{
+    /* color: red !important; */
+    opacity: 1 !important;
+}
+.streamer-card:hover{
+    border:1px solid #000;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.hacking-tools{
+    height: 800px;
+}
+
+/* .vul-card{
+    cursor: pointer;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    height: 400px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: transparent;
+    margin: 0 25px;
+} */
+
+@media only screen and (max-width: 719px){
+    .resources-container{
+        height: 90%;
+    }
+    .streamer-list{
+        height: 100%;
+    }
+}

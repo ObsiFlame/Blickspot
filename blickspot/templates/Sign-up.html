@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blickspot</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'Styles/loader.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'assets/Blickspot-Logo.svg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/Sign-up.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/bootstrap-elevated.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'Styles/main-home.css')}}">
+    <link rel="stylesheet" href="/static/Styles/Fonts.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+      <div class="spinner-grow text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+      <div class="container">
+        <a class="nav-brand" href="{{url_for('home')}}"><img src="/static/assets/Blickspot-Logo.svg" alt="Blickspot" width="150" height="40"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main-collapse">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('cyber_attack')}}">Cyber Attacks</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('report')}}">Reports</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">Trending</a></li>
+            <li class="nav-item d-lg-block text-dark mx-5 py-1"><a class="nav-link" href="{{url_for('about_us')}}">About</a></li>
+          </ul>
+          <ul class="navbar-nav align-items-lg-center d-lg-flex ml-lg-auto">
+            <li class="nav-item d-lg-block"><a class="nav-link btn Youtuber-btn text-white px-5" href="{{url_for('login')}}">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+      <div id="particles-js"></div>
+
+      </div>
+
+      <header class="text-center mt-5">
+      <h2 class="display-4 head-login">Create Account</h2>
+      <h3 class="title mb-4 pb-2">Let's get you all set up so you can get more with us</h3>
+      </header>
+      <div class="container text-center mt-3">
+        {% with messages = get_flashed_messages()%}
+        {% if messages %}
+          {%for msg in messages %}
+            <q class="font-weight-bold  alert alert-warning"> {{ msg }} <i class="fas fa-exclamation"></i> </q>
+          {% endfor %}
+        {% endif %}
+        {% endwith %}
+      </div>
+      <div class="container container-form">
+          <form action="{{url_for('signup')}}" method="post" class="mb-3">
+            <div class="form-group">
+              <label for="InputUsername">Username</label>
+              <input type="text" class="form-control" id="InputUsername" name="InputUsername" aria-describedby="UsernameHelp" placeholder="What you would like to call yourself" required>
+              <small id="emailHelp" class="form-text text-muted">Provide your username</small>
+            </div>
+            <div class="form-group">
+                <label for="InputEmail">Email Address</label>
+                <input type="email" class="form-control" id="InputEmail" name="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else</small>
+              </div>
+              <div class="form-group">
+                <label for="InputPassword">Password</label>
+                <input type="password" class="form-control" id="InputPassword" name="InputPassword" aria-describedby="PasswordHelp" placeholder="Password" required>
+                <small id="PasswordHelp" class="form-text text-muted">Your password is our concern</small>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label pb-1" for="exampleCheck1">Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-danger py-1">Create</button>
+          </form>
+          <small class="my-5">Already have an account ? <a class="text-primary" href="{{url_for('login')}}">Login</a></small>
+          
+      </div>
+      <!-- Features -->
+      <div class="cloud-back top-wave bottom-wave mt-5">
+        <div class="container">
+          <section class="row mb-3 text-center">
+            <div class="col-md-4 p-3">
+              <h2 class="head-cl">Statistics</h2>
+              <p class="text-center">Let's know what's happing around the digital world. We bring you the Statistics from the best platforms so that you get concerned about your digital Life</p>
+            </div>
+            <div class="col-md-4 p-3">
+              <h2 class="head-cl">Cyber Healing</h2>
+              <p class="text-center">Nation with care from Us, Learn more how the situations get away from the worst-nights & we as a Cybersecurity Community will let you know what security measures you should take</p>
+            </div>
+            <div class="col-md-4 p-3">
+              <h2 class="head-cl">Social Palace</h2>
+              <p class="text-center">Social media platforms getting more important as the world develops faster, Our platform will let you know the best Infosec Persons to look for</p>
+            </div>
+          </section>
+          <!-- <section class="row mb-3"></section> -->
+        </div>
+      </div>
+      
+      <!-- <hr class="feature-divider"> -->
+
+     <!-- FOOTER -->
+     <section class="footer clearfix">
+      <div class="container-fluid p-5">
+        <div class="row">
+          <div class="col-md-4 text-center"><span><a href="" class="contact-us">blickspot@gmail.com</a></span></div>
+          <div class="col-md-4 text-center"><span class="Designer">Designed by <i class="fas fa-meteor" style="color: #ad2351;"></i> Seacom Skills University</span>
+            <small class="community-name text-center">BLICKSPOT</small>
+          </div>
+          <div class="col-md-4 text-center social-footer-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+</body>
+
+<script src="{{url_for('static',filename = 'assets-main/particles.js')}}"></script>
+<script src="/static/scripts/loader.js"></script>
+<script src="{{url_for('static', filename = 'assets-main/app.js')}}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</html>
