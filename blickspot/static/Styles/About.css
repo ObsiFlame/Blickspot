@@ -54,3 +54,15 @@ a{
     background-color: #f7f7f7;
     position: relative;
 }
+
+@media only screen and (max-width: 850px){
+    .blickspot-feature{
+        display: none !important;
+    }
+    .blickspot-feature-heading{
+        display: none !important;
+    }
+    .podcast{
+        height: 100vh !important;
+    }
+}
