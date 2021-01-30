@@ -76,7 +76,7 @@ def cyber_attack():
 
 @app.route("/report")
 def report():
-    return render_template('report.html')
+    return render_template('Report.html')
 
 @app.route("/support")
 def support():
