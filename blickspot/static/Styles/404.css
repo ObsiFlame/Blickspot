@@ -1,5 +1,7 @@
 h1{
-    margin: auto;
+    margin: 25% 0 5% 0;
+    font-size: 5rem;
+
     background-position: center !important; 
     text-align: center !important;
 }
